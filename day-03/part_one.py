@@ -4,7 +4,7 @@ from pathlib import Path
 
 PATTERN = re.compile(r"mul\((\d{1,3}),(\d{1,3})\)")
 
-input_data = Path("./3/input.txt").read_text()
+input_data = Path(__file__).parent.joinpath("input.txt").read_text()
 
 matches = PATTERN.finditer(input_data)
 

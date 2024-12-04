@@ -1,6 +1,6 @@
 from pathlib import Path
 
-input_data = Path("./1/input.txt").read_text()
+input_data = Path(__file__).parent.joinpath("input.txt").read_text()
 
 pairs = [
     [int(number) for number in line.strip().split("   ")]

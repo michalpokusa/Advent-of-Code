@@ -1,6 +1,6 @@
 from pathlib import Path
 
-input_data = Path("./2/input.txt").read_text()
+input_data = Path(__file__).parent.joinpath("input.txt").read_text()
 
 reports = [
     [int(level) for level in line.split(" ")] for line in input_data.split("\n") if line
