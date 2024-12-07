@@ -49,7 +49,7 @@ def does_obstruction_make_guard_stuck(
 
     map[obstruction_y][obstruction_x] = "O"
 
-    guard_patrol_history = []
+    guard_patrol_history = set()
 
     while True:
         guard = map[guard_y][guard_x]
@@ -57,7 +57,7 @@ def does_obstruction_make_guard_stuck(
         if (guard, guard_y, guard_x) in guard_patrol_history:
             return True
 
-        guard_patrol_history.append((guard, guard_y, guard_x))
+        guard_patrol_history.add((guard, guard_y, guard_x))
 
         if guard == "^":
             next_y, next_x = guard_y - 1, guard_x
