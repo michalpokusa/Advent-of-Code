@@ -22,29 +22,20 @@ antinodes: "dict[str, set[tuple[int, int]]]" = defaultdict(set)
 
 for antenna, positions in antennas.items():
     for pos1, pos2 in combinations(positions, 2):
-        antinodes[antenna].add(pos1)
-        antinodes[antenna].add(pos2)
-
         d_row = pos2[0] - pos1[0]
         d_col = pos2[1] - pos1[1]
 
         antinode_pos = pos1
-        while True:
+        while is_inside_map(map, *antinode_pos):
+            antinodes[antenna].add(antinode_pos)
+
             antinode_pos = (antinode_pos[0] - d_row, antinode_pos[1] - d_col)
 
-            if not is_inside_map(map, *antinode_pos):
-                break
-
-            antinodes[antenna].add(antinode_pos)
-
         antinode_pos = pos2
-        while True:
-            antinode_pos = (antinode_pos[0] + d_row, antinode_pos[1] + d_col)
-
-            if not is_inside_map(map, *antinode_pos):
-                break
-
+        while is_inside_map(map, *antinode_pos):
             antinodes[antenna].add(antinode_pos)
+
+            antinode_pos = (antinode_pos[0] + d_row, antinode_pos[1] + d_col)
 
 
 unique_antinodes = set(
