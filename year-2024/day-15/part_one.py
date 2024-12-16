@@ -88,8 +88,6 @@ def calculate_boxes_gps_coordinates(warehouse: Warehouse) -> int:
 warehouse = Warehouse(warehouse_map)
 
 for move in moves:
-    print()
     warehouse.move_robot(move)
-    print()
 
 print(calculate_boxes_gps_coordinates(warehouse))
