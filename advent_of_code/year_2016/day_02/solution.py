@@ -29,7 +29,7 @@ class AdventOfCode2016Day2Part1(AdventOfCode):
             list(line) for line in self.input_data.strip().splitlines()
         ]
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         x, y = 1, 1
         bathroom_code = ""
 
@@ -53,7 +53,7 @@ class AdventOfCode2016Day2Part1(AdventOfCode):
 
 class AdventOfCode2016Day2Part2(AdventOfCode2016Day2Part1):
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         x, y = 0, 2
         bathroom_code = ""
 

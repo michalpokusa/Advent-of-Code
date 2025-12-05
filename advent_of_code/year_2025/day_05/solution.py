@@ -29,7 +29,7 @@ class AdventOfCode2025Day5Part1(AdventOfCode):
                 return True
         return False
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         fresh_ingredients = 0
 
         for ingredient_id in self.available_ingredient_ids:
@@ -41,7 +41,7 @@ class AdventOfCode2025Day5Part1(AdventOfCode):
 
 class AdventOfCode2025Day5Part2(AdventOfCode2025Day5Part1):
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         ingredient_ids_considered_fresh = 0
 
         ranges_edge_points = sorted(

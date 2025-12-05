@@ -15,7 +15,7 @@ class AdventOfCode2025Day3Part1(AdventOfCode):
             list(map(int, line)) for line in self.input_data.strip().split("\n")
         ]
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         total_output_joltage = 0
 
         for bank in self.banks:
@@ -44,7 +44,7 @@ class AdventOfCode2025Day3Part2(AdventOfCode2025Day3Part1):
             bank_voltage += battery_voltage * (10**battery_idx)
         return bank_voltage
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         total_output_joltage = 0
         batteries_per_bank = 12
 

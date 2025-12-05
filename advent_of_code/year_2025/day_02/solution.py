@@ -27,7 +27,7 @@ class AdventOfCode2025Day2Part1(AdventOfCode):
 
         return True
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         invalid_ids = [
             id
             for first_id, last_id in self.id_ranges

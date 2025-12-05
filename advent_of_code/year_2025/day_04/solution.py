@@ -19,7 +19,7 @@ class AdventOfCode2025Day4Part1(AdventOfCode):
 
         self.diagram_copy = deepcopy(self.diagram)
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         accessible_rolls_of_paper = 0
 
         for x in range(self.diagram_width):
@@ -109,7 +109,7 @@ class AdventOfCode2025Day4Part2(AdventOfCode2025Day4Part1):
 
         return removed_rolls_of_paper
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         total_removed_rolls_of_paper = 0
 
         while True:

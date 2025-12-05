@@ -13,7 +13,7 @@ class AdventOfCode2025Day1Part1(AdventOfCode):
 
         self.rotations = [line.strip() for line in self.input_data.strip().splitlines()]
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         current_position = 50
         nr_of_times_pointing_to_zero = 0
 
@@ -39,7 +39,7 @@ class AdventOfCode2025Day1Part1(AdventOfCode):
 
 class AdventOfCode2025Day1Part2(AdventOfCode2025Day1Part1):
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         current_position = 50
         nr_of_times_pointing_to_zero = 0
 

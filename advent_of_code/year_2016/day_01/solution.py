@@ -33,7 +33,7 @@ class AdventOfCode2016Day1Part1(AdventOfCode):
 
         self.instructions = self.input_data.strip().split(", ")
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         x, y = 0, 0
         facing = "N"
 
@@ -57,7 +57,7 @@ class AdventOfCode2016Day1Part1(AdventOfCode):
 
 class AdventOfCode2016Day1Part2(AdventOfCode2016Day1Part1):
 
-    def get_answer(self) -> int:
+    def get_answer(self):
         x, y = 0, 0
         facing = "N"
 
