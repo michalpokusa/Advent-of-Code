@@ -61,5 +61,6 @@ class AdventOfCode2025Day1Part2(AdventOfCode2025Day1Part1):
         return nr_of_times_pointing_to_zero
 
 
-answer = AdventOfCode2025Day1Part1(DEFAULT_EXAMPLE_INPUT_FILE_PATH).get_answer()
-print(answer)
+if __name__ == "__main__":
+    answer = AdventOfCode2025Day1Part1(DEFAULT_EXAMPLE_INPUT_FILE_PATH).get_answer()
+    print(answer)

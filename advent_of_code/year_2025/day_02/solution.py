@@ -45,5 +45,6 @@ class AdventOfCode2025Day2Part2(AdventOfCode2025Day2Part1):
         return re.fullmatch(r"^(\d+)\1+$", id) is None
 
 
-answer = AdventOfCode2025Day2Part2(DEFAULT_INPUT_FILE_PATH).get_answer()
-print(answer)
+if __name__ == "__main__":
+    answer = AdventOfCode2025Day2Part2(DEFAULT_INPUT_FILE_PATH).get_answer()
+    print(answer)

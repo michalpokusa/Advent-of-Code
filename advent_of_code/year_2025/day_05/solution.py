@@ -69,5 +69,6 @@ class AdventOfCode2025Day5Part2(AdventOfCode2025Day5Part1):
         return ingredient_ids_considered_fresh
 
 
-answer = AdventOfCode2025Day5Part2(DEFAULT_INPUT_FILE_PATH).get_answer()
-print(answer)
+if __name__ == "__main__":
+    answer = AdventOfCode2025Day5Part2(DEFAULT_INPUT_FILE_PATH).get_answer()
+    print(answer)

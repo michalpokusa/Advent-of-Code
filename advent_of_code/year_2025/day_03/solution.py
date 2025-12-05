@@ -65,5 +65,6 @@ class AdventOfCode2025Day3Part2(AdventOfCode2025Day3Part1):
         return total_output_joltage
 
 
-answer = AdventOfCode2025Day3Part2(DEFAULT_INPUT_FILE_PATH).get_answer()
-print(answer)
+if __name__ == "__main__":
+    answer = AdventOfCode2025Day3Part2(DEFAULT_INPUT_FILE_PATH).get_answer()
+    print(answer)

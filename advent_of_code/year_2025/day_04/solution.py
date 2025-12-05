@@ -122,5 +122,6 @@ class AdventOfCode2025Day4Part2(AdventOfCode2025Day4Part1):
         return total_removed_rolls_of_paper
 
 
-answer = AdventOfCode2025Day4Part2(DEFAULT_EXAMPLE_INPUT_FILE_PATH).get_answer()
-print(answer)
+if __name__ == "__main__":
+    answer = AdventOfCode2025Day4Part2(DEFAULT_EXAMPLE_INPUT_FILE_PATH).get_answer()
+    print(answer)
