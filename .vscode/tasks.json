@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Python: Current File",
+            "type": "shell",
+            "command": "PYTHONPATH=${workspaceFolder} ${command:python.interpreterPath} -u ${file}",
+            "presentation": {
+                "clear": true
+            },
+        },
+        {
+            "label": "Python cProfile: Current File",
+            "type": "shell",
+            "command": "PYTHONPATH=${workspaceFolder} ${command:python.interpreterPath} -u -m cProfile ${file} > ${fileDirname}/cProfile-result-$(date +%Y_%m_%d_%H%M%S).txt",
+            "presentation": {
+                "clear": true
+            }
+        },
+        {
+            "label": "Remove *.pyc and __pycache__",
+            "type": "shell",
+            "command": "find . -name \"*.pyc\" -delete && find . -type d -name \"__pycache__\" -exec rm -r {} +"
+        }
+    ],
+}
